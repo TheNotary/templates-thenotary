@@ -1,0 +1,7 @@
+# Potential binaries
+/main
+/<%=config[:unprefixed_name]%>
+
+# Coverage report junk
+c.out
+c.html

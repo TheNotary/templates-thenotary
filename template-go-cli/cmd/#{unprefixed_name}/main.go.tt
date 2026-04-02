@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+
+	"<%=config[:git_repo_path]%>/pkg/api"
+)
+
+func main() {
+	myVar, err := api.SayHello("pew pew")
+	if err != nil {
+		fmt.Println("Error: " + err.Error())
+	}
+	fmt.Println(myVar)
+}
