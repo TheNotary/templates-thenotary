@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"<%=config[:git_repo_path]%>/pkg/api"
+	"FOO_GIT_REPO_PATH/pkg/api"
 )
 
 func main() {

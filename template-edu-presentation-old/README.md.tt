@@ -1,4 +1,0 @@
-# ERROR
-
-This template doesn't work with bundlegem because I haven't implemented `.bundlegem#no_rename_on_render = true`.  So instead of using bundlegem, just do a clone of the repo.  There's no template variables so it will work out great :)
-

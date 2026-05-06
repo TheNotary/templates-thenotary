@@ -1,6 +1,6 @@
 # Potential binaries
 /main
-/<%=config[:unprefixed_name]%>
+/foo-bar
 
 # Coverage report junk
 c.out

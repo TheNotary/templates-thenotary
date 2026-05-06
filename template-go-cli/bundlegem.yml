@@ -1,4 +1,4 @@
 category: general_purpose
 purpose: tool
 language: go
-bootstrap_command: "go mod init #{config[:git_repo_path]} && go mod tidy"
+bootstrap_command: "go mod init FOO_GIT_REPO_PATH && go mod tidy"
