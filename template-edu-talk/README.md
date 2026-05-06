@@ -11,15 +11,20 @@ Here is a template I use for giving talks.  The work flow follows:
 
 The top part of essay.md should be a bulleted outline of the talk.  Then there should be links to slides or other resources such as references.  The remainder of `essay.md` should be the actual talk written as it would be spoken during the lecture.  Once essay.md is written, it's built into the index.html via the `build/make.sh` script.
 
-```
+```bash
 cd build/
+bundle install
 ./make.sh
 ```
 
 
 ## slides.html
 
-The slides are built using reveal.js.  Hack your slides into the `slides.html` file.
+The slides are built using reveal.js.  Hack your slides into the `slides.html` file.  Install the dependencies via:
+
+```bash
+pnpm install
+```
 
 
 ## brief.md
