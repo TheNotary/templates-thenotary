@@ -1,4 +1,40 @@
 category: general_purpose
 purpose: tool
 language: go
+name_validation:
+  # Go module/binary names: lowercase letters, digits, hyphens; must start with a letter.
+  regex_validator: "^[a-z][a-z0-9-]*$"
+  # Common Go standard-library top-level package names that would shadow imports.
+  reserved_names:
+    - bufio
+    - builtin
+    - bytes
+    - context
+    - crypto
+    - encoding
+    - errors
+    - flag
+    - fmt
+    - go
+    - hash
+    - html
+    - image
+    - io
+    - log
+    - math
+    - net
+    - os
+    - path
+    - reflect
+    - regexp
+    - runtime
+    - sort
+    - strconv
+    - strings
+    - sync
+    - syscall
+    - testing
+    - time
+    - unicode
+    - unsafe
 bootstrap_command: "go mod init FOO_GIT_REPO_PATH && go mod tidy"
