@@ -1,0 +1,50 @@
+[package]
+name = "foo_bar"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "foo_bar"
+path = "src/main.rs"
+
+[dependencies]
+# Use git dependencies pinned to a specific windows-rs master commit so we
+# pick up COM aggregation / composition support (PR #4360 — `Application::compose`)
+# that has not yet shipped in the 0.66.0 / 0.62.x crates on crates.io. The
+# upstream `xaml_app` sample this project mirrors targets master for the same
+# reason.
+windows-core = { git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs", rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7" }
+windows-collections = { git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs", rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7" }
+windows-future = { git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs", rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7" }
+windows-numerics = { git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs", rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7" }
+
+[dependencies.windows]
+git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs"
+rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7"
+features = [
+    "ApplicationModel",
+    "ApplicationModel_Activation",
+    "ApplicationModel_Core",
+    "ApplicationModel_DataTransfer",
+    "Foundation",
+    "Foundation_Collections",
+    "System",
+    "UI",
+    "UI_Composition",
+    "UI_Core",
+    "UI_Input",
+    "UI_Popups",
+    "UI_Text",
+    "UI_ViewManagement",
+    "Win32_Storage_Packaging_Appx",
+    "Win32_System_Com",
+    "Win32_UI_WindowsAndMessaging",
+]
+
+[build-dependencies]
+windows-bindgen = { git = "https://FOO_GIT_REPO_DOMAIN/microsoft/windows-rs", rev = "561541f3aa70bd3968d303fc78e9f87c2eddc3d7" }
+
+[profile.dev]
+# Keep debug symbols so crash dumps are useful (register.cmd checks for the PDB).
+debug = true
