@@ -1,5 +1,10 @@
 # Talk Template
 
+[Demo](https://FOO_AUTHOR.github.io/foo-bar)
+
+TODO: Change a quick setting in github repo to get deployments working!
+`settings -> GH Pages -> Deploy From (change to GH Actions)`
+
 Here is a template I use for giving talks.  The work flow follows:
 
 1) Generate an essay for the talk you'll give in essay.md (please write it in the exact manor in which you intend to read it).
